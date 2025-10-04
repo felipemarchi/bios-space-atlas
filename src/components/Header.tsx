@@ -15,14 +15,14 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#explorar" className="text-foreground/80 hover:text-primary transition-colors">
-              Explorar
+            <a href="/" className="text-foreground/80 hover:text-primary transition-colors">
+              Início
+            </a>
+            <a href="/chat" className="text-foreground/80 hover:text-primary transition-colors">
+              Chat
             </a>
             <a href="#missoes" className="text-foreground/80 hover:text-primary transition-colors">
               Missões
-            </a>
-            <a href="#historias" className="text-foreground/80 hover:text-primary transition-colors">
-              Histórias
             </a>
             <a href="#comunidade" className="text-foreground/80 hover:text-primary transition-colors">
               Comunidade

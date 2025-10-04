@@ -190,6 +190,35 @@ const Chat = () => {
         </Collapsible>
       </main>
 
+      {/* Linha do Tempo */}
+      <section className="border-t border-border/50 glass-card py-6">
+        <div className="container mx-auto px-4">
+          <h3 className="font-semibold mb-4 text-sm text-muted-foreground uppercase tracking-wider">
+            Linha do Tempo
+          </h3>
+          <ScrollArea className="w-full">
+            <div className="flex gap-4 pb-4">
+              {academicWorks.map((work, index) => (
+                <div
+                  key={index}
+                  className="relative flex-shrink-0 w-48"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-primary shadow-glow flex-shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium truncate">{work}</p>
+                    </div>
+                  </div>
+                  {index < academicWorks.length - 1 && (
+                    <div className="absolute top-1.5 left-3 w-full h-[2px] bg-gradient-to-r from-primary/50 to-transparent" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </ScrollArea>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

@@ -8,6 +8,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card } from "@/components/ui/card";
 import { VscFilePdf } from "react-icons/vsc";
 import { usePaper } from "@/context/PaperContext";
+import { toast } from "react-toastify";
 
 type Message = {
   id: string;
@@ -62,6 +63,7 @@ const Chat = () => {
       };
       setMessages([...messages, newMessage]);
       setPrompt("");
+      toast.success("Nova consquista desbloqueada no diário de bordo!");
       // TODO: Integrar com LLM
     }
   };

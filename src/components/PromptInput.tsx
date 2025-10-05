@@ -18,8 +18,7 @@ const PromptInput = (props: PromptInputProps) => {
     if (prompt.trim()) {
       console.log("Prompt enviado:", prompt);
       // TODO: Integrar com LLM
-      setPrompt("");
-      navigate('/library?a=3'); // Redireciona para a página da biblioteca
+      setPrompt("");      
     }
   };
 
@@ -29,9 +28,9 @@ const PromptInput = (props: PromptInputProps) => {
         <div className="flex items-start gap-3 mb-4">
           <Sparkles className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
           <div className="flex-1">
-            <h2 className="text-xl font-semibold mb-2">Pergunte ao Atlas</h2>
-            <p className="text-sm text-muted-foreground">
-              Explore o universo da biologia espacial com inteligência artificial
+            <h2 className="text-xl font-semibold">Se deseja <span className="text-accent">pesquisar ou aprender</span></h2>
+            <p className="">
+              Pergunte já para o Atlas!
             </p>
           </div>
         </div>
@@ -40,7 +39,7 @@ const PromptInput = (props: PromptInputProps) => {
           <Textarea
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
-            placeholder="Digite sua pergunta sobre biologia espacial, ecossistemas, evolução..."
+            placeholder="Digite sua pergunta sobre biologia espacial, ecossistemas, evolução, mutação..."
             className="min-h-[240px] pr-14 bg-background/50 border-border/50 focus:border-primary transition-colors resize-none"
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
@@ -49,13 +48,20 @@ const PromptInput = (props: PromptInputProps) => {
               }
             }}
           />
-          <Button
-            onClick={handleSubmit}
-            size="icon"
-            className="absolute bottom-3 right-3 bg-primary hover:bg-primary/90 glow-primary"
-          >
-            <Send className="h-4 w-4" />
-          </Button>
+          <div className="absolute bottom-3 right-3">          
+            <Button
+              onClick={() => navigate('/stories')}
+              className="bg-accent mr-2 hover:bg-accent/90 glow-accent"
+            >
+              Respostas para leigos
+            </Button>
+            <Button
+              onClick={() => navigate('/library?a=3')}
+              className="bg-accent hover:bg-accent/90 glow-accent"
+            >
+              Respostas avançadas
+            </Button>
+          </div>
         </div>
 
         {props.ativarRecomendacoes && (

@@ -33,23 +33,7 @@ const StoriesBar = (props:StoriesBarProps) => {
           }, { passive: false });
       }}
     >
-      <h2 className='mb-4 font-semibold text-muted-foreground/75'>Estante de Experimentos</h2>
-      <div className="flex gap-6">
-        {duplicatedItems.map((item, index) => {
-          return (
-            <Card onClick={() => {
-              setSelectedIndex(index);
-              setPaperIndex(index);
-            }} className={`glass-card cursor-pointer flex-shrink-0 w-72 p-3 flex items-center gap-4 hover:scale-105 transition-transform ${selectedIndex === index ? 'selected-book' : ''}`}
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#FFA500]/10 flex items-center justify-center">
-                <FaBook className={`w-6 h-6 text-[#FFA500]`} />
-              </div>
-              <span>{item}</span>
-            </Card>
-          );
-        })}
-      </div>
+      <h2 className='mb-4 font-semibold text-muted-foreground/75'>Aqui você consulta todo seu aprendizado desbloqueado durante as pesquisas</h2>
     </div>
   );
 };

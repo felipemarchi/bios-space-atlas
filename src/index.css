@@ -7,11 +7,26 @@
   background-size: cover;
 }
 
+.bg-book {
+  background-image: url('./assets/book.jpg');
+}
+
 .exo-2-regular {
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
+}
+
+.exo-2-bold {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.selected-book {
+  border-color: #ffa50075;
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 

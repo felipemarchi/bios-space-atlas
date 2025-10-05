@@ -1,15 +1,15 @@
-import { Compass, Calendar, BookOpen, Share2 } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { Card } from "./ui/card";
 import { GiAstronautHelmet } from 'react-icons/gi';
 import { TbFileUpload } from 'react-icons/tb';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 const today = new Date();
 const day = String(today.getDate()).padStart(2, '0');
 const month = String(today.getMonth() + 1).padStart(2, '0');
 const formattedDate = `${day}/${month}`;
-
 const actions = [
   {
     title: "Missão do dia!",
@@ -27,7 +27,7 @@ const actions = [
   },
   {
     title: "Criar módulo de exploração",
-    description: "Desenvolva seus próprios módulos educacionais interativos",
+    description: "Crie questionários educacionais personalizados!",
     icon: HiOutlineRocketLaunch,
     iconClass: "text-primary",
     bgClass: "bg-primary/10 group-hover:bg-primary/20",
@@ -41,26 +41,28 @@ const actions = [
   },
 ];
 
-function handleActionClick(index: number) {
-  switch(index) {
-    case 0:
-      toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");
-      break;
-    case 1:
-      toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");
-      break;
-    case 2:
-      toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");
-      break;
-    case 3:
-      toast.success("Obrigado! Trabalho recebido com sucesso!");
-      break;
-    default:
-      break;
-  }
-}
-
 const ActionCards = () => {
+  const navigate = useNavigate();
+
+  function handleActionClick(index: number) {
+    switch(index) {
+      case 0:
+        navigate('/mission');
+        break;
+      case 1:
+        navigate('/stories');
+        break;
+      case 2:
+        navigate('/exploration');
+        break;
+      case 3:
+        toast.success("Obrigado! Trabalho recebido com sucesso!");
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mx-auto">
       {actions.map((action, index) => {

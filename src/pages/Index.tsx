@@ -2,15 +2,12 @@ import Header from "@/components/Header";
 import PromptInput from "@/components/PromptInput";
 import ActionCards from "@/components/ActionCards";
 import { VscLightbulbSparkle } from 'react-icons/vsc';
-import InfiniteCarousel from "@/components/InfiniteCarousel";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-main">
       <Header />
-
-      <InfiniteCarousel />
       
       <main className="flex-1 container mx-auto px-4 py-12">
         <div className="flex flex-col items-center justify-center gap-12">

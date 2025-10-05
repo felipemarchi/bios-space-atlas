@@ -41,7 +41,7 @@ const PromptInput = (props: PromptInputProps) => {
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             placeholder="Digite sua pergunta sobre biologia espacial, ecossistemas, evolução..."
-            className="min-h-[120px] pr-14 bg-background/50 border-border/50 focus:border-primary transition-colors resize-none"
+            className="min-h-[240px] pr-14 bg-background/50 border-border/50 focus:border-primary transition-colors resize-none"
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();

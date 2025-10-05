@@ -4,6 +4,7 @@ import logo from "@/assets/biospace-logo.png";
 import { toast, ToastContainer } from "react-toastify";
 
 const Header = () => {
+  const fullUrl = window.location.href;
   return (
     <header className="w-full border-b border-border/50 glass-card">
       <div className="container mx-auto px-4 py-4">
@@ -16,16 +17,16 @@ const Header = () => {
           </a>
           
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#missoes" onClick={() => {toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");}} className="text-foreground/80 hover:text-primary transition-colors">
-              Missões
+            <a href="/mission" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('mission') ? 'text-primary' : ''}`}>
+              Missão
             </a>
-            <a href="#historias" onClick={() => {toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");}} className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="/stories" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('stories') ? 'text-primary' : ''}`}>
               Histórias
             </a>
-            <a href="#explorar" onClick={() => {toast.warning("Ops! Você encontrou uma funcionalidade em desenvolvimento.");}} className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="/exploration" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('exploration') ? 'text-primary' : ''}`}>
               Exploração
             </a>
-            <a href="/library" className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="/library" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('library') ? 'text-primary' : ''}`}>
               Trabalhos
             </a>
           </nav>

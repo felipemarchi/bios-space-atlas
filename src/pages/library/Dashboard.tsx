@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { academicWorks } from "./Chat";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePaper } from "@/context/PaperContext";
 import './dashboard-scrollbar.css';
 
@@ -14,8 +14,16 @@ interface DashboardProps {
 
 const Dashboard = (props: DashboardProps) => {
 
-    const { paperIndex } = usePaper();
+    const { paperIndex, setPaperIndex } = usePaper();
     const [openDashboard, setOpenDashboard] = useState<boolean>(false);
+
+    function isNotValid(paperIndex:number):boolean {
+        return paperIndex === null || isNaN(paperIndex) || paperIndex < 0 || paperIndex >= academicWorks.length
+    }
+
+    useEffect(() => {
+        setOpenDashboard(!isNotValid(paperIndex));
+    },[paperIndex])
 
     return (
         <div className={`relative w-full overflow-hidden ${openDashboard ? 'pt-8' : 'py-8'} border-y border-border`}>
@@ -31,7 +39,7 @@ const Dashboard = (props: DashboardProps) => {
                         <span className="text-lg font-semibold">{props.text}</span>
                     </div>
                 </Card>
-                {paperIndex === null || isNaN(paperIndex) || paperIndex < 0 || paperIndex >= academicWorks.length ? (
+                {isNotValid(paperIndex) ? (
                     <div className="flex w-full items-center justify-center">
                         <p className="text-muted-foreground"><i>Selecione uma publicação para visualizar um painel de dados detalhados.</i></p>
                     </div>

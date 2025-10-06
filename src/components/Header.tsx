@@ -18,13 +18,13 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center gap-6">
             <a href="/library" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('library') ? 'text-primary' : ''}`}>
-              Biblioteca
+              Library
             </a>
             <a href="/stories" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('stories') ? 'text-primary' : ''}`}>
-              Histórias
+              Stories
             </a>
             <a href="/exploration" className={`text-foreground/80 hover:text-primary transition-colors ${fullUrl.includes('exploration') ? 'text-primary' : ''}`}>
-              Diário de bordo
+              Logbook
             </a>
           </nav>
 

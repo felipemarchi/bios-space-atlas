@@ -33,7 +33,7 @@ const StoriesBar = (props:StoriesBarProps) => {
           }, { passive: false });
       }}
     >
-      <h2 className='mb-4 font-semibold text-muted-foreground/75'>Aqui você consulta todo seu aprendizado desbloqueado durante as pesquisas</h2>
+      <h2 className='mb-4 text-muted-foreground/75'>Here you can consult all the learning you have unlocked during your research</h2>
     </div>
   );
 };

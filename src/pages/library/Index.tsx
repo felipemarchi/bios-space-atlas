@@ -26,7 +26,7 @@ const Index = () => {
         <section className="border-t border-border/50 glass-card py-6">
           <div className="mx-auto px-4">
             <h3 className="font-semibold mb-4 text-sm text-muted-foreground uppercase tracking-wider">
-              Linha do Tempo das Publicações
+              Publications Timeline
             </h3>
             <div
                 className="py-8 px-4 flex-1 overflow-x-auto custom-scrollbar"
@@ -52,7 +52,7 @@ const Index = () => {
                     <div className="flex items-center gap-3">
                       <div className="w-3 h-3 rounded-full bg-primary shadow-glow flex-shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-medium truncate ml-[-1.4rem]">(fev/2004)</p>
+                        <p className="text-sm font-medium truncate ml-[-1.4rem]">(feb/2004)</p>
                         <p className="text-sm font-medium truncate mb-20 ml-[-1.4rem]">{work}</p>
                       </div>
                     </div>
@@ -81,10 +81,10 @@ const Index = () => {
         <div className="flex flex-col items-center justify-center gap-12">
           <div className="text-center space-y-4 max-w-3xl">
             <h2 className="text-5xl md:text-6xl font-bold bg-clip-text">
-              O que vamos pesquisar hoje?
+              What will we research today?
             </h2>
           </div>
-          <PromptInput ativarRecomendacoes={true} />
+          <PromptInput activeRecommendations={true} />
         </div>
       </main>
       

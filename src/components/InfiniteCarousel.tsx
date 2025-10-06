@@ -4,12 +4,12 @@ import { Card } from "./ui/card";
 import Dashboard from '@/pages/library/Dashboard';
 
 const carouselItems = [
-  { icon: Dna, text: "Genética Avançada", color: "text-primary" },
-  { icon: Microscope, text: "Microbiologia", color: "text-accent" },
-  { icon: Atom, text: "Bioquímica", color: "text-primary" },
-  { icon: Leaf, text: "Ecologia", color: "text-accent" },
-  { icon: Beaker, text: "Biotecnologia", color: "text-primary" },
-  { icon: Brain, text: "Neurociência", color: "text-accent" },
+  { icon: Dna, text: "Radiation", color: "text-primary" },
+  { icon: Microscope, text: "Microbiology", color: "text-accent" },
+  { icon: Atom, text: "Exobiology", color: "text-primary" },
+  { icon: Leaf, text: "Gravitational", color: "text-accent" },
+  { icon: Beaker, text: "Astrobiology", color: "text-primary" },
+  { icon: Brain, text: "Physiology", color: "text-accent" },
 ];
 
 const InfiniteCarousel = () => {
@@ -33,7 +33,7 @@ const InfiniteCarousel = () => {
   // Caso contrário, exibe o carrossel animado normalmente
   const duplicatedItems = [...carouselItems, ...carouselItems, ...carouselItems];
   return (
-    <div className="relative w-full overflow-hidden py-8 border-y border-border" title="Classificação das áreas da biologia espacial">
+    <div className="relative w-full overflow-hidden py-8 border-y border-border" title="Classification of space biology fields">
       <div className="flex animate-scroll gap-6">
         {duplicatedItems.map((item, index) => {
           const Icon = item.icon;

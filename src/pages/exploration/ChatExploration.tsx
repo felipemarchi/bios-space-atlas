@@ -15,20 +15,20 @@ type Message = {
 };
 
 const areas = [
-"Genética Avançada",
-"Microbiologia",
-"Bioquímica",
-"Ecologia",
-"Biotecnologia",
-"Neurociência",
+"Radiation",
+"Microbiology",
+"Exobiology",
+"Gravitational",
+"Astrobiology",
+"Physiology",
 ];
 
 const academicWorks = [
-"Fotossíntese e Respiração Celular",
-"Genética Mendeliana",
-"Evolução das Espécies",
-"Ecossistemas Marinhos",
-"Biotecnologia Moderna",
+"Adaptation Mechanisms of Microorganisms in Microgravity Environments",
+"The Impact of Cosmic Radiation on Human Cellular Function During Long-Term Spaceflight",
+"Plant Growth and Gene Expression in Extraterrestrial Soil Analogs",
+"Immune System Modulation in Astronauts: Challenges of Extended Space Missions",
+"Bioregenerative Life Support Systems: Harnessing Biology for Sustainable Space Habitats"
 ];
 
 const ChatExploration = () => {

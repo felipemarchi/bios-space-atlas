@@ -33,7 +33,7 @@ const StoriesBar = (props:StoriesBarProps) => {
           }, { passive: false });
       }}
     >
-      <h2 className='mb-4 font-semibold text-muted-foreground/75'>Estante de Experimentos</h2>
+      <h2 className='mb-4 font-semibold text-muted-foreground/75'>Experiment Shelf</h2>
       <div className="flex gap-6">
         {duplicatedItems.map((item, index) => {
           return (

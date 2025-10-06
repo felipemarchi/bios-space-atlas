@@ -35,19 +35,19 @@ const Dashboard = (props: DashboardProps) => {
                         <props.icon className={`w-6 h-6 ${props.color}`} />
                     </div>
                     <div>
-                        <span className="text-lg font-semibold text-gray-500">Vamos falar sobre:</span><br />         
+                        <span className="text-lg font-semibold text-gray-500">Let's talk about:</span><br />         
                         <span className="text-lg font-semibold">{props.text}</span>
                     </div>
                 </Card>
                 {isNotValid(paperIndex) ? (
                     <div className="flex w-full items-center justify-center">
-                        <p className="text-muted-foreground"><i>Selecione uma publicação para visualizar um painel de dados detalhados.</i></p>
+                        <p className="text-muted-foreground"><i>Select a publication to view a detailed data dashboard</i></p>
                     </div>
                 ) : (
                     <div className="flex w-full items-center justify-between">
                         <div>
                             <p className="text-lg"><b>Trabalho selecionado:</b> {academicWorks[paperIndex]}</p>                            
-                            <p className="text-muted-foreground"><a href="#" className="text-primary">Acesse o artigo completo</a> ou expanda para ver detalhes como resumo, insights, e mais.</p>
+                            <p className="text-muted-foreground"><a href="#" className="text-primary">Access the full article</a> or expand to see details such as abstract, insights, and more.</p>
                         </div>
                         <Button
                             className="hover:bg-transparent hover:text-white border border-primary"
@@ -78,7 +78,7 @@ const Dashboard = (props: DashboardProps) => {
                 >
                     <div className="flex gap-2">
                         <div className="min-w-[400px] min-h-[200px] w-full bg-white/5 rounded-lg p-4 shadow">
-                            <p className="mb-2"><b>Resumo:</b></p>
+                            <p className="mb-2"><b>Abstract:</b></p>
                             <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec erat turpis, condimentum elementum cursus a, varius ac ante. Nulla vestibulum mi vel lectus tempus laoreet. Donec volutpat eros vitae massa efficitur, ut fringilla arcu feugiat. Nunc vitae imperdiet purus. Integer suscipit sem justo, in hendrerit nisi interdum non. Morbi mauris dui, rhoncus a mi vitae, suscipit consectetur arcu. Sed a suscipit neque. Donec rhoncus eget est nec tempor. Nullam ultricies in mi a hendrerit.</p>
                         </div>
                         <div className="min-w-[400px] min-h-[200px] w-full bg-white/5 rounded-lg p-4 shadow">

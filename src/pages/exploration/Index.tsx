@@ -7,11 +7,11 @@ import { usePaper } from "@/context/PaperContext";
 import StoriesBar from "./StoriesBar";
 
 const papers = [
-"Fotossíntese e Respiração Celular",
-"Genética Mendeliana",
-"Evolução das Espécies",
-"Ecossistemas Marinhos",
-"Biotecnologia Moderna",
+"Adaptation Mechanisms of Microorganisms in Microgravity Environments",
+"The Impact of Cosmic Radiation on Human Cellular Function During Long-Term Spaceflight",
+"Plant Growth and Gene Expression in Extraterrestrial Soil Analogs",
+"Immune System Modulation in Astronauts: Challenges of Extended Space Missions",
+"Bioregenerative Life Support Systems: Harnessing Biology for Sustainable Space Habitats"
 ];
 
 const Index = () => {
@@ -21,28 +21,28 @@ const Index = () => {
   // Conteúdo das páginas do livro
   const pages = [
     {
-      title: "Células e Estruturas",
-      content: "✅ As células são as unidades básicas da vida. Todos os organismos vivos são compostos por células, que podem ser procarióticas ou eucarióticas.",
+      title: "Lorem Ipsum Achievements",
+      content: "✅ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ultricies sem et tincidunt. Suspendisse convallis diam non est dignissim interdum. Vivamus eu lacus feugiat, pellentesque sem sit amet, dapibus enim.",
       img: "",
     },
     {
-      title: "DNA e Genética",
-      content: "✅ O DNA contém as instruções genéticas usadas no desenvolvimento e funcionamento de todos os organismos vivos conhecidos.",
+      title: "Lorem Ipsum Achievements",
+      content: "✅ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ultricies sem et tincidunt. Suspendisse convallis diam non est dignissim interdum. Vivamus eu lacus feugiat, pellentesque sem sit amet, dapibus enim.",
       img: "",
     },
     {
-      title: "Evolução",
-      content: "✅ A teoria da evolução explica como as espécies mudam ao longo do tempo através da seleção natural e outros mecanismos.",
+      title: "Lorem Ipsum Achievements",
+      content: "✅ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ultricies sem et tincidunt. Suspendisse convallis diam non est dignissim interdum. Vivamus eu lacus feugiat, pellentesque sem sit amet, dapibus enim.",
       img: "",
     },
     {
-      title: "Ecossistemas",
-      content: "✅ Um ecossistema é uma comunidade de organismos vivos interagindo com os componentes não-vivos de seu ambiente.",
+      title: "Lorem Ipsum Achievements",
+      content: "✅ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ultricies sem et tincidunt. Suspendisse convallis diam non est dignissim interdum. Vivamus eu lacus feugiat, pellentesque sem sit amet, dapibus enim.",
       img: "",
     },
     {
-      title: "Biodiversidade",
-      content: "✅ A biodiversidade refere-se à variedade de vida na Terra, incluindo a diversidade dentro das espécies, entre espécies e de ecossistemas.",
+      title: "Lorem Ipsum Achievements",
+      content: "✅ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ultricies sem et tincidunt. Suspendisse convallis diam non est dignissim interdum. Vivamus eu lacus feugiat, pellentesque sem sit amet, dapibus enim.",
       img: "",
     },
   ];

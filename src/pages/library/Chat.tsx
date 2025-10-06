@@ -18,11 +18,11 @@ type Message = {
 };
 
 const academicWorks = [
-"Fotossíntese e Respiração Celular",
-"Genética Mendeliana",
-"Evolução das Espécies",
-"Ecossistemas Marinhos",
-"Biotecnologia Moderna",
+"Adaptation Mechanisms of Microorganisms in Microgravity Environments",
+"The Impact of Cosmic Radiation on Human Cellular Function During Long-Term Spaceflight",
+"Plant Growth and Gene Expression in Extraterrestrial Soil Analogs",
+"Immune System Modulation in Astronauts: Challenges of Extended Space Missions",
+"Bioregenerative Life Support Systems: Harnessing Biology for Sustainable Space Habitats"
 ];
 
 const Chat = () => {
@@ -33,22 +33,19 @@ const Chat = () => {
     {
       id: "1",
       role: "assistant",
-      content: "Olá! Como posso te ajudar hoje?",
+      content: "Hello! How can I help you today?",
       timestamp: new Date(),
     },
     {
       id: "2",
       role: "user",
-      content: "Olá! Gostaria de saber mais sobre biologia espacial.",
+      content: "Hello! I’d like to learn more about space biology.",
       timestamp: new Date(),
     },
   ]);
 
   const savedNotebooks = [
-    "Estudo sobre DNA",
-    "Células Tronco",
-    "Biodiversidade Brasileira",
-    "Proteínas e Enzimas",
+    "Studies about DNA",
   ];
 
   const { setPaperIndex } = usePaper();
@@ -63,7 +60,7 @@ const Chat = () => {
       };
       setMessages([...messages, newMessage]);
       setPrompt("");
-      toast.success("Nova consquista desbloqueada no diário de bordo!");
+      toast.success("New achievement unlocked in the logbook!");
       // TODO: Integrar com LLM
     }
   };
@@ -79,8 +76,8 @@ const Chat = () => {
             <div className={`h-full transition-all duration-300 ${leftPanelOpen ? "w-72" : "w-0"}`}>
             <CollapsibleContent className="h-full">
                 <div className="h-full glass-card p-4">
-                <h3 className="font-semibold text-lg">Publicações da área</h3>
-                <p className="text-muted-foreground mb-4">Trabalhos relacionados à categoria selecionada acima</p>
+                <h3 className="font-semibold text-lg">Area publications</h3>
+                <p className="text-muted-foreground mb-4">Works related to the category selected above</p>
                 <ScrollArea className="h-[calc(100vh-200px)]">
                     <div className="space-y-3">
                         <RadioGroup>
@@ -144,7 +141,7 @@ const Chat = () => {
                     <Textarea
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
-                    placeholder="Digite sua mensagem..."
+                    placeholder="Type your message..."
                     className="min-h-[80px] pr-14 bg-background/50 border-border/50 focus:border-primary transition-colors resize-none"
                     onKeyDown={(e) => {
                         if (e.key === "Enter" && !e.shiftKey) {
@@ -164,7 +161,7 @@ const Chat = () => {
                 <div className="max-w-3xl mx-auto relative mt-4">
                     <div className="flex-1">
                         <p className="text-sm mb-2">
-                            Recomendações baseadas em suas últimas pesquisas:
+                            Recommendations based on your recent searches:
                         </p>
                         <div className="gap-2 flex flex-wrap">
                             <a href="#">
@@ -174,7 +171,7 @@ const Chat = () => {
                                 <div className="w-6 h-6 flex items-center justify-center">
                                 <VscFilePdf className={`w-5 h-5 text-red-500`} />
                                 </div>
-                                <span className="text-sm font-semibold">Trabalho XPTO</span>
+                                <span className="text-sm font-semibold">Example Work</span>
                             </Card>
                             </a>
 
@@ -185,7 +182,7 @@ const Chat = () => {
                                 <div className="w-6 h-6 flex items-center justify-center">
                                 <VscFilePdf className={`w-5 h-5 text-red-500`} />
                                 </div>
-                                <span className="text-sm font-semibold">Trabalho Lorem Ipsum</span>
+                                <span className="text-sm font-semibold">Lorem Ipsum Paper</span>
                             </Card>
                             </a>
                         </div>
@@ -212,8 +209,8 @@ const Chat = () => {
             <div className={`h-full transition-all duration-300 ${rightPanelOpen ? "w-72" : "w-0"}`}>
             <CollapsibleContent className="h-full">
                 <div className="h-full glass-card p-4">
-                <h3 className="font-semibold text-lg">Meus Cadernos</h3>
-                <p className="text-muted-foreground mb-4">Anotações salvas ao longo das conversas dentro desta categoria de trabalhos</p>
+                <h3 className="font-semibold text-lg">My notebooks</h3>
+                <p className="text-muted-foreground mb-4">Notes saved throughout conversations within this work category</p>
                 <ScrollArea className="h-[calc(100vh-200px)]">
                     <div className="space-y-2">
                     {savedNotebooks.map((notebook, index) => (

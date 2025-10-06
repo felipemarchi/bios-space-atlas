@@ -20,10 +20,10 @@ const Index = () => {
         <div className="flex flex-col items-center justify-center gap-12">
           <div className="text-center space-y-4 max-w-3xl">
             <h2 className="text-5xl md:text-6xl font-bold bg-clip-text">
-              Explore o Universo da Biologia Espacial
+              Explore the Universe of Space Biology
             </h2>
             <p className="text-xl text-muted-foreground">
-              Uma jornada educacional através do espaço e da vida
+              An educational journey through space and life
             </p>
           </div>
 
@@ -35,9 +35,9 @@ const Index = () => {
                 <div className="flex items-start gap-3 mb-4">
                   <GiAstronautHelmet className="w-12 h-12 text-primary flex-shrink-0 mt-1" />
                   <div className="flex-1">
-                    <h2 className="text-xl font-semibold">Caso prefira <span className="text-primary">se desafiar</span></h2>
+                    <h2 className="text-xl font-semibold">If you’d rather <span className="text-primary">challenge yourself</span></h2>
                     <p>
-                      Aceite nossa Missão do dia!
+                      Accept our mission of the day!
                     </p>
                   </div>
                 </div>
